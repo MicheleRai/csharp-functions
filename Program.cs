@@ -3,7 +3,7 @@ programma(componiArray());
 
 void programma(int[] numbers)
 {
-    Console.WriteLine("Array originale: ");
+    Console.WriteLine("Array creato da te: ");
 
     printArray(numbers);
 
@@ -11,15 +11,15 @@ void programma(int[] numbers)
 
     printArray(ElevaArrayAlQuadrato(numbers));
 
-    Console.WriteLine("Array originale: ");
+    Console.WriteLine("Array creato da te: ");
 
     printArray(numbers);
 
-    Console.WriteLine("Somma array originale: ");
+    Console.WriteLine("Somma array creato da te: ");
 
     Console.WriteLine(sommaElementiArray(numbers));
 
-    Console.WriteLine("Somma array originale con numeri al quadrato");
+    Console.WriteLine("Somma array creato da te con numeri al quadrato");
 
     Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
 
