@@ -1,24 +1,43 @@
-﻿int[] numbers = { 2, 6, 7, 5, 3, 9 };
+﻿
+programma(componiArray());
 
-Console.WriteLine("Array originale: ");
+void programma(int[] numbers)
+{
+    Console.WriteLine("Array originale: ");
 
-printArray(numbers);
+    printArray(numbers);
 
-Console.WriteLine("Array al quadrato: ");
+    Console.WriteLine("Array al quadrato: ");
 
-printArray(ElevaArrayAlQuadrato(numbers));
+    printArray(ElevaArrayAlQuadrato(numbers));
 
-Console.WriteLine("Array originale: ");
+    Console.WriteLine("Array originale: ");
 
-printArray(numbers);
+    printArray(numbers);
 
-Console.WriteLine("Somma array originale: ");
+    Console.WriteLine("Somma array originale: ");
 
-Console.WriteLine(sommaElementiArray(numbers));
+    Console.WriteLine(sommaElementiArray(numbers));
 
-Console.WriteLine("Somma array originale con numeri al quadrato");
+    Console.WriteLine("Somma array originale con numeri al quadrato");
 
-Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
+    Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
+
+    printArray(numbers);
+}
+
+int[] componiArray()
+{
+    Console.WriteLine("Quanto vuoi che sia lungo l'array lungo l'array?");
+    int[] nums = new int[Convert.ToInt32(Console.ReadLine())];
+    for (int i = 0; i < nums.Length; i++)
+    {
+        Console.WriteLine($"immetti il numero in  posizione {i}:");
+        nums[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return nums;
+}
+
 
 void printArray(int[] array)
 {
