@@ -1,4 +1,6 @@
 ﻿
+using System.Collections;
+
 programma(componiArray());
 
 void programma(int[] numbers)
@@ -24,6 +26,10 @@ void programma(int[] numbers)
     Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
 
     printArray(numbers);
+
+    Console.WriteLine(printaPiuPiccolo(numbers));
+
+
 }
 
 int[] componiArray()
@@ -90,4 +96,14 @@ int sommaElementiArray(int[] array)
         sum += item;
     }
     return sum;
+}
+
+//superbonus
+int printaPiuPiccolo(int[] array)
+{
+    var piccolo = 0;
+    Array.Sort(array);
+
+    return piccolo = array[0];
+ 
 }
