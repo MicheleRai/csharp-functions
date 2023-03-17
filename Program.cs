@@ -29,6 +29,9 @@ void programma(int[] numbers)
 
     Console.WriteLine(printaPiuPiccolo(numbers));
 
+    Console.WriteLine(printaPiuPiccolo2(numbers, 0));
+
+
 
 }
 
@@ -102,8 +105,30 @@ int sommaElementiArray(int[] array)
 int printaPiuPiccolo(int[] array)
 {
     var piccolo = 0;
+    
     Array.Sort(array);
+
 
     return piccolo = array[0];
  
+}
+
+int printaPiuPiccolo2(int[] array, int index)
+{
+    var piccolo = 0;
+
+    if (index < array.Length - 1)
+    {
+        if (array[index] > array[index + 1])
+        {
+            var temp = array[index];
+            array[index] = array[index + 1];
+            array[index + 1] = temp;
+        }
+        if (index > 0 && array[index] < array[index - 1]) printaPiuPiccolo2(array, index - 1);
+        else printaPiuPiccolo2(array, index + 1);
+    }
+
+    return piccolo = array[0];
+
 }
