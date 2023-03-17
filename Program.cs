@@ -12,6 +12,14 @@ Console.WriteLine("Array originale: ");
 
 printArray(numbers);
 
+Console.WriteLine("Somma array originale: ");
+
+Console.WriteLine(sommaElementiArray(numbers));
+
+Console.WriteLine("Somma array originale con numeri al quadrato");
+
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numbers)));
+
 void printArray(int[] array)
 {
     Console.WriteLine(arrayToString(array));
@@ -56,5 +64,11 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
 int sommaElementiArray(int[] array)
 {
+    var sum = 0;
 
+    foreach (var item in array)
+    {
+        sum += item;
+    }
+    return sum;
 }
